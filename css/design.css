@@ -1,0 +1,308 @@
+/* Para que el tamaño de un div se compute tambien con el padding y el borde*/
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;		
+	box-sizing: border-box;
+}
+
+html * {
+
+  -webkit-font-smoothing: antialiased;
+ 
+}
+
+html, body {	
+   margin:0px;
+   padding:0px;
+   height:100%;
+}
+
+
+html {
+	
+	/* Soportamos rem al tamaño del pixel 1.6rem = 16px y que no se escalen las letras*/				
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;	
+	-o-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-moz-tap-highlight-color: rgba(0,0,0,0);
+	-ms-tap-highlight-color: rgba(0,0,0,0);
+	-o-tap-highlight-color: rgba(0,0,0,0);	
+	tap-highlight-color: rgba(0,0,0,0);			
+
+}
+
+body{	
+
+	font-size:14px;
+	font-family: Verdana, Arial, sans-serif;
+	font-style: normal;
+	background-color:#eaeaea;
+	
+}
+
+/* Par cuando necesitemos aplicar un clearfix*/
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+*{
+/*backface-visibility*/
+-webkit-backface-visibility:hidden;
+   -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+     -o-backface-visibility:hidden;
+        backface-visibility:hidden;
+}
+
+.celda_25{
+	width:25%;
+	float:left;
+}
+.celda_30{
+	width:33.33%;
+	float:left;
+}
+.celda_20{
+	width:20%;
+	float:left;
+}
+.celda_50{
+	width:50%;
+	float:left;
+}
+
+.material{
+	background-color:#fcfcfc;
+	box-shadow: 0px 2px 3px 0px rgba(173, 173, 173, 0.2);
+	border-radius:2px 2px 2px 2px;
+}
+
+
+.table{
+  width:100%;
+  height:100%;
+  display:table;
+  table-layout: fixed;
+}
+.cell{
+	display:table-cell;
+}
+
+#contApp{
+  width:100%;
+  height:100%;
+  display:table;
+  table-layout: fixed;
+}
+
+#panelTeclas{
+	display:table-cell;
+	width:150px;
+	height:100%;
+	padding:0px 10px 10px 0px;
+}
+#panelContenido{
+	display:table-cell;
+	width:100%;
+	height:100%;
+}
+
+#rowHead{
+	height:85px;
+}
+#rowComment{
+	height:40px;
+}			
+
+.tr{
+	display: table-row;
+	width:100%;
+}
+
+.full{
+	width:100%;
+	height:100%;				
+}	
+.fullH{
+	height:100%;				
+}						
+
+#contHead{
+	padding:10px;
+}
+#contComment{
+	padding:0px 10px;
+}
+#contResult{				
+	padding:10px;				
+}
+
+#headc .cell{
+	width:100%;
+	height:100%;
+}
+
+#comment{
+}
+
+#contenedorTexto{
+	padding-right:5px;
+	height:100%;
+}			
+#contenedorEnlaces{
+	padding-left:5px;
+	height:100%;				
+}
+
+.titulo{
+	padding:8px 0px;;				
+	text-align: center;
+	font-size: 14px;
+	color: #585858;
+	background-color:#F8F8F8;
+	border-bottom: 1px solid #E9E9E9;
+	font-family: Verdana, sans-serif;
+}
+#contLogo{
+	height: 60px;
+	width: 138px;
+	border-right: 1px solid #eee;
+	padding-left:35px;
+	padding-top:10px;				
+}				
+#logo{
+	height:40px;
+	width: 69px;
+	background-image:url(../imagenes/logo.png);
+	background-size:contain;
+	opacity:0.7;
+}
+
+#contHeadInput{
+	width:100%;
+	height:60px;
+}
+
+#headTitulo{
+	width:100%;
+	height:25px;
+	float:left;
+	color:#575757;
+	padding-top:10px;
+	padding-left:10px;
+	font-size:14px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+#headContInput{
+	width:100%;
+	height:30px;
+	float:left;
+	padding:10px;
+	padding-bottom:0px;
+}
+.tecla{
+	width:100%;
+	font-size:14px;
+	margin-top:0px;
+	margin-bottom:10px;	
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	padding:10px;
+	padding-right:0px;
+	color:#606060;
+	float:left;
+}
+
+.pressed{
+	background-color:#F6F6F6;
+	color:#363636;	
+}
+
+#procesando{
+	width:25px;
+	height:25px;
+	float: right;
+	background-image:url(../imagenes/procesando.gif);
+	background-position:center center;
+	margin-right:10px;
+	margin-top:-5px;
+	opacity:0.6;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+#infoBuscar{
+	color:#999;
+	width:100%;
+	height:20px;
+	font-size:13px;
+	background: #F0F0F1;
+	border: 1px solid #E8E8E8;
+	padding:0px 10px;
+	border-radius:2px;
+}
+
+#contTexto{
+	padding:20px;
+	font-size:13px;
+}
+#contEnlaces{
+	padding:10px;
+}
+
+.contLink{
+	margin-bottom:2px;
+}
+.contLink a{
+	color:#444;
+	font-size:12px;	
+}
+
+.flecha{
+	width:10px;
+	height:10px;
+	margin-top:5px;
+	margin-right:10px;
+	float:left;
+	background-image:url(../imagenes/flecha.png);
+	background-size:contain;
+	color: #AB181B;
+}
+
+.nolink{
+	opacity:0.1;
+}
+.linkSelected{
+	opacity:0.8;									
+}
+#player-inputHablar{
+	width:100%;
+	height:100%;
+	border:none;
+	border-radius:2px;
+	color:#555;
+	font-size:14px;
+	resize:vertical;
+	overflow-y: hidden; /* fixes scrollbar flash - kudos to @brettjonesdev */
+	padding:4px;
+}
