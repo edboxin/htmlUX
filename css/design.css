@@ -306,3 +306,6 @@ textarea:focus, input:focus{
 	overflow-y: hidden; /* fixes scrollbar flash - kudos to @brettjonesdev */
 	padding:4px;
 }
+a{
+	color:#434343;
+}
